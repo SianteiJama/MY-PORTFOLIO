@@ -1,129 +1,156 @@
+
 body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  color: #333;
+  background: #f1f5f9;
+  color: #222;
+  font-family: "Segoe UI", "Poppins", sans-serif;
 }
 
+/* ========== Header Section ========== */
 header {
+  background: hwb(192 43% 23%);  /* teal blue background */
   color: #fff;
-  padding: 2rem;
   text-align: center;
+  padding: 2.5rem 1rem;
 }
 
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* Profile picture inside header */
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;     /* round photo */
+  object-fit: cover;      /* avoid stretching */
+  border: 3px solid #fff; /* white border for contrast */
+  margin-bottom: 15px;
+}
+
+/* ========== Sections ========== */
 section {
   padding: 3rem 2rem;
   max-width: 900px;
   margin: 0 auto;
 }
+
 .about-text {
-  text-align: justify;   /* spreads text evenly */
+  text-align: justify;
   font-size: 1.1rem;
-  line-height: 1.6;      /* improves readability */
+  line-height: 1.6;
   color: #444;
-  margin: 0 auto;        /* centers block inside section */
-  max-width: 700px;      /* keeps text from being too wide */
+  margin: 0 auto;
+  max-width: 700px;
 }
-.about-text {
+
+.about-text.center {
   text-align: center;
 }
+
+/* ========== Skills Section ========== */
 #skills {
   padding: 2rem;
   background: #f9f9f9;
-  text-align: left;   /* aligns everything inside to the left */
+  text-align: left;
 }
 
 #skills h2 {
   margin-bottom: 1rem;
-  font-size: 1.5rem;
-  color: #222;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1e3a8a; /* dark blue */
 }
 
 .skills-list {
-  padding-left: 20px;  /* space for bullets */
+  padding-left: 20px;
   line-height: 1.8;
   font-size: 1.1rem;
   color: #333;
 }
-body {
-  font-family: 'Poppins', sans-serif;
-}
-h1, h2 {
-  font-weight: 600;
-  color: #222;
-}
-:root {
-  --primary: #1e3a8a;   /* dark blue */
-  --accent: #0ea5e9;    /* cyan */
-  --light-bg: #f9f9f9;
-}
-h2 {
-  color: var(--primary);
-}
-a {
-  color: var(--accent);
-  text-decoration: none;
-}
-@media (max-width: 768px) {
-  header, section {
-    padding: 2rem 1rem;
-  }
-}
-.contact-icons {
+
+/* ========== Project Cards ========== */
+.project-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
-  font-size: 1.5rem;
-}
-.contact-icons a {
-  color: #333;
-  transition: color 0.3s ease;
-}
-.contact-icons a:hover {
-  color: #0ea5e9; /* accent color on hover */
-}
-
-/* Modern Clean Theme */
-body {
-  background: #f1f5f9;
-  color: #222;
-  font-family: "Segoe UI", sans-serif;
-  margin: 0;
-}
-
-header {
-  background: hwb(192 43% 23%);   /* teal blue */
-  color: #fff;
-  text-align: center;
-  padding: 2rem;
-}
-
-a {
-  color: #14b8a6;        /* aqua green accent */
-  text-decoration: none;
-}
-
-section {
-  padding: 2rem;
-}
-.project-container {
-  display: flex;                  /* use flexbox instead of grid */
-  flex-wrap: wrap;                /* allow wrapping to new lines */
-  justify-content: center;        /* center the cards */
-  gap: 1.5rem;                    /* space between cards */
   margin-top: 1rem;
 }
 
 .project-card {
   background: #fff;
-  width: 300px;                   /* fixed card width */
+  width: 300px;
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
+  transition: transform 0.2s ease;
   text-align: left;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
 }
+
+/* ========== Buttons ========== */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #14b8a6;  /* aqua green */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #0d9488; /* darker aqua */
+}
+
+/* ========== Contact Icons ========== */
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.contact-icons a {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.contact-icons a:hover {
+  color: #0ea5e9; /* cyan hover */
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  header, section {
+    padding: 2rem 1rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+
+
+
+
